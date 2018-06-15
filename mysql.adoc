@@ -62,16 +62,24 @@ mysql_secure_instalation
 Conectare:
 mysql -h host -u username -p
 
-# listare baze de date
+Comenzi MySQL
+~~~~~~~~~~~~
+
+
+Listare baze de date
+^^^^^^^^^^^^^^^^^^^
 show databases;
 
-# select database
+Select database
+^^^^^^^^^^^^^^
 use db_name;
 
-# list tables from db
+List tables from db
+^^^^^^^^^^^^^^^^^^
 show tables;
 
-# describe table
+Describe table
+^^^^^^^^^^^^^
 describe table_name;
 
 #####
