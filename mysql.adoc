@@ -1,0 +1,89 @@
+MYSQL/MariaDB
+------------
+
+Terminologie
+~~~~~~~~~~~
+
+* SQL - Structured Query Language
+* RDBMS - Relational DataBase Management System
+* Tabel (Table) - o colectie de inregistrari avand o structura asemanatoare si definind o
+categorie de 'obiecte'. Fiecare linie reprezinta o inregistrare (record).
+* Linie (Row) -
+* Baza de date (Database) - Colectie structurata de informatii constand in unul sau mai multe tabele
+
+Fisiere de configurare
+~~~~~~~~~~~~~~~~~~~~~
+Istoric fisierul de configurare al serverului mysql este:
+
+[source,bash]
+-----------------
+ ./etc/mysql/my.cnf
+-----------------
+
+In cazul distributiilor moderne bazate pe Debian/Ubuntu acest fisier
+contine doar referinte pentru includerea fiseirelor de configurare din:
+
+* in cazul serverului:
+
+[source,bash]
+-------------
+/etc/mysql/mysql.conf.d/
+-------------
+
+* in cazul clientului:
+
+[source,bash]
+-------------
+/etc/mysql/mysql.conf.d/
+-------------
+
+
+Baze de date Relationale
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* Oracle
+* DB2 IBM
+* Microsoft SQL Server
+* Postgresql
+* sqlite
+* AWS Aurora
+
+Instalare server mysql/mariadb
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Ubuntu/Debian:
+apt-get install mysql-server
+apt-get install mariadb-server
+* Redhat/CentOS:
+yum install mariadb-server
+
+
+mysql_secure_instalation
+
+Conectare:
+mysql -h host -u username -p
+
+# listare baze de date
+show databases;
+
+# select database
+use db_name;
+
+# list tables from db
+show tables;
+
+# describe table
+describe table_name;
+
+#####
+
+# creare baza de date
+CREATE DATABASE db1;
+
+# creare user si atribuire permisiuni pe baza de date
+GRANT ALL PRIVILEGES ON db1.* TO `dbuser`@`localhost` IDENTIFIED BY "password1";
+
+# create tables
+CREATE TABLE test1 (
+id INT(3) AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(20) NOT NULL
+);
