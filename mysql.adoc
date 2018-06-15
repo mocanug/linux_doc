@@ -68,19 +68,35 @@ Comenzi MySQL
 
 Listare baze de date
 ^^^^^^^^^^^^^^^^^^^
+
+[source,bash]
+-----------------
 show databases;
+-----------------
 
 Select database
 ^^^^^^^^^^^^^^
+
+[source,bash]
+-----------------
 use db_name;
+-----------------
 
 List tables from db
 ^^^^^^^^^^^^^^^^^^
+
+[source,bash]
+-----------------
 show tables;
+-----------------
 
 Describe table
 ^^^^^^^^^^^^^
+
+[source,bash]
+-----------------
 describe table_name;
+-----------------
 
 #####
 
